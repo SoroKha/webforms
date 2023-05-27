@@ -12,7 +12,13 @@ namespace WebApplication1
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            Debug.WriteLine(DateTime.Now);
+            Debug.WriteLine("Page Loaded.");
         }
+
+        protected void TestClick(object sender, EventArgs e)
+        {
+            test.Text = "Hello";
+        }
+
     }
 }
