@@ -15,10 +15,22 @@ namespace WebApplication1
             Debug.WriteLine("Page Loaded.");
         }
 
-        protected void TestClick(object sender, EventArgs e)
+        protected void btnSubmit_Click(object sender, EventArgs e)
         {
-            test.Text = "Hello";
+            if (long.TryParse(txtNumber.Text, out long number))
+            {
+                // Perform the desired processing based on the number
+                long result = number * 2;
+
+                // Display the result
+                lblResult.Text = "The result is: " + result.ToString();
+            }
+            else
+            {
+                lblResult.Text = "Invalid input. Please enter a valid number.";
+            }
         }
+    
 
     }
 }
